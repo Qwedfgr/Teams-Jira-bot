@@ -1,0 +1,5 @@
+botbuilder-integration-aiohttp>=4.8.0
+jira
+docxtpl
+yadisk
+python-dotenv

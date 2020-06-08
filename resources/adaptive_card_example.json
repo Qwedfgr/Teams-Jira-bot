@@ -1,0 +1,151 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Для формирования листов учета рабочего времени заполните, \nпожалуйста, следующие поля:",
+                    "color": "Dark",
+                    "spacing": "Large",
+                    "horizontalAlignment": "Left",
+                    "size": "Medium",
+                    "height": "stretch",
+                    "wrap": true
+                },
+                {
+                    "type": "Input.Text",
+                    "id": "Employee",
+                    "placeholder": "Фамилия Имя Отчество"
+                },
+                {
+                    "type": "Input.Text",
+                    "id": "Email",
+                    "placeholder": "Рабочая почта",
+                    "style": "Email"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "Input.Text",
+                                    "placeholder": "Номер договора",
+                                    "id": "AgreementNumber"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "Input.Date",
+                                    "id": "AgreementDate"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "Input.Text",
+                                    "placeholder": "Номер допсоглашения",
+                                    "id": "AdditionalAgreementNumber"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "Input.Date",
+                                    "id": "AdditionalAgreementDate",
+                                    "$data": "AdditionalAgreementDate"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Период с"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Период по"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "Input.Date",
+                                    "id": "DateFrom"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "Input.Date",
+                                    "id": "DateTo"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "horizontalAlignment": "Right",
+            "spacing": "None",
+            "style": "good"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Сформировать листы",
+            "data": {
+                "x": 13
+            },
+            "style": "positive",
+            "id": "CreateReports"
+        }
+    ],
+    "lang": "ru"
+}
